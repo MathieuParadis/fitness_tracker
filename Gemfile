@@ -69,3 +69,7 @@ gem 'faker'
 
 # Authentification
 gem 'devise'
+
+# Bootstrap
+gem 'bootstrap', '~> 5.1.3'
+gem 'jquery-rails'
