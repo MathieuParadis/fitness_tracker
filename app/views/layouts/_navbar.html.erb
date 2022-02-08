@@ -1,6 +1,33 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-light px-4">
+  <div class="container-fluid d-flex justify-content-between">
+    <div>
+      <%= link_to root_path, class: "text-decoration-none" do %>
+        <span class="navbar-brand d-flex align-items-center">
+          <%= image_tag("logo.svg", style: "max-height: 70px",alt: "move and groove logo", class: "pe-2") %>
+          <h2 class="is-size-3 title is-text-dark has-text-weight-bold">Move & Groove</h2>
+        </span>
+      <% end %>
+    </div>
+    <% if user_signed_in? %>
+      <div class="d-flex">
+        <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-round btn-100 me-2" %>
+        <%= link_to "Login", new_user_session_path, class: "btn btn-outline-secondary btn-round btn-100 ms-2" %>
+      </div>
+    <% else %>
+      <div class="dropdown">
 
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="#">My profile</a></li>
+          <li><a class="dropdown-item" href="#">My records</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Logout</a></li>
+        </ul>
+
+      </div>
+    <% end %>
 
     </div>
   </div>
