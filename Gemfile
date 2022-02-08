@@ -73,3 +73,6 @@ gem 'devise'
 # Bootstrap
 gem 'bootstrap', '~> 5.1.3'
 gem 'jquery-rails'
+
+# Font awesome
+gem 'font-awesome-rails'
