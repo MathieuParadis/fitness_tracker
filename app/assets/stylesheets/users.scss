@@ -9,9 +9,12 @@
   min-height: 100vh;
 
   .box {
-    border: 1px solid black;
-    min-width: 350px;
-    width: 420px;
+    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+    width: 440px;
+
+    @media screen and (max-width: 500px) {
+      width: 360px;
+    }
 
     .field {
       margin-bottom: 1em;
@@ -39,8 +42,8 @@
           &:focus {
             border: none;
             outline: none;
-            border-color: #9ecaed;
-            box-shadow: 0 0 10px #9ecaed;
+            border-color: $primary;
+            box-shadow: 0 0 10px $primary;
           }
         }
 

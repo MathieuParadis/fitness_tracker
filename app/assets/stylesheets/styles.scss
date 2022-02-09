@@ -2,3 +2,10 @@ $primary: #390e9c;
 $primary_hover: #7856c9;
 $secondary: #070B34;
 
+.padding-page {
+  padding-top: 4em;
+
+  @media screen and (max-width: 500px) {
+    padding-top: 5em;
+  }
+}
