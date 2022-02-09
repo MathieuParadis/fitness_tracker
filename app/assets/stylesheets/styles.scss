@@ -3,9 +3,9 @@ $primary_hover: #7856c9;
 $secondary: #070B34;
 
 .padding-page {
-  padding-top: 4em;
+  padding-top: 3em;
+}
 
-  @media screen and (max-width: 500px) {
-    padding-top: 5em;
-  }
+.box-shadow {
+  box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
 }

@@ -1,26 +1,63 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+<div class="signup-login-section">
+  <div class="container">
+    <div class="box-shadow d-flex justify-content-center align-items-center">
+      <div class="img-section d-none d-lg-block">
+        <%= image_tag("workout.jpg") %>
+      </div>
+      <div class="container d-flex flex-column justify-content-center align-items-center">
+        <div class="box">
+          <div class="d-flex flex-column justify-content-center">
+            <%= image_tag("icon_dumbell.svg", style: "max-height: 60px", alt: "move and groove logo", class: "pe-2") %>
+            <h2 class="text-center h5 mt-2 mb-5">Welcome back!</h2>
+          </div>
+          <div class="signup-form mx-3 mb-4">
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+              <%= render "devise/shared/error_messages", resource: resource %>
+              <div class="field">
+                <%= f.label :email %><br />
+                <div class="input">
+                  <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+                  <span class="icon-mail"><i class="fa fa-envelope text-primary"></i></span>
+                </div>
+              </div>
+              <div class="field">
+                <%= f.label :password %>
+                <% if @minimum_password_length %>
+                <em>(<%= @minimum_password_length %> characters minimum)</em>
+                <% end %><br />
+                <div class="input">
+                  <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password" %>
+                  <span class="icon-lock"><i class="fa fa-lock text-primary"></i></span>
+                </div>
+              </div>
+              <% if devise_mapping.rememberable? %>
+                <div class="field">
+                  <%= f.check_box :remember_me %>
+                  <%= f.label :remember_me? %>
+                </div>
+              <% end %>
+              <div class="actions mt-4 d-flex justify-content-center">
+                <%= f.submit "Login", class: "btn-round btn-100 text-white py-2" %>
+              </div>
+            <% end %>
+          </div>
+          <div class="text-center my-4">
+            <p>Not Registered yet? <%= render "devise/shared/links" %></p>
+          </div>
+        </div>
+      </div>
     </div>
-  <% end %>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
+
+
+
+
+
+
   </div>
-<% end %>
+</div>
 
-<%= render "devise/shared/links" %>
+
+
+
+
