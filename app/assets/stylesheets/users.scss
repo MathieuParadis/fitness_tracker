@@ -1,3 +1,74 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.signup-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  .box {
+    border: 1px solid black;
+    min-width: 350px;
+    width: 420px;
+
+    .field {
+      margin-bottom: 1em;
+
+      label {
+        font-weight: 500;
+        padding-bottom: 0.5em;
+      }
+
+      .input {
+        position: relative;
+        display: block;
+        width: 100%;
+
+        input {
+          border: 1px solid #dadada;
+          border-radius: 7px;
+          width: 100%;
+          height: 2.5em;
+          padding-top: 0.3em;
+          padding-bottom: 0.3em;
+          padding-left: 2.3em;
+          outline: none;
+        
+          &:focus {
+            border: none;
+            outline: none;
+            border-color: #9ecaed;
+            box-shadow: 0 0 10px #9ecaed;
+          }
+        }
+
+        .icon-mail {
+          position: absolute;
+          left: 10px;
+          top: 20%;
+        }
+
+        .icon-lock {
+          position: absolute;
+          left: 13px;
+          top: 20%;
+        }
+      }
+    }
+
+    .actions {
+      input {
+        border: none;
+        background-color: $primary;
+
+
+        &:hover {
+          transform: scale(1.1);
+          background-color: $primary_hover;
+        }
+      }
+    }
+  }
+}
