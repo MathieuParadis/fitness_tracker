@@ -2,11 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.signup-login-section {
+.signup-section, .login-section, .forgot-password-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 85vh;
+
+  .img-section img {
+    max-height:510px;
+    object-fit: contain;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
 
   .box {
     width: 440px;
@@ -75,9 +82,17 @@
   }
 }
 
+.login-section {
+  @media (min-width: 992px) {
+    .border-radius-5 {
+      border-top-left-radius: 0 !important;
+      border-bottom-left-radius: 0 !important;
+    }
+  }
+}
 
-.img-section img {
-  max-width:100%;
-  max-height:100%;
-  object-fit: contain;
+.forgot-password-section {
+  .box {
+    width: 100%;
+  }
 }
