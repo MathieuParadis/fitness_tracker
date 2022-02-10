@@ -1,6 +1,7 @@
 $primary: #0faef0;
 $primary_hover: #0D9CD8;
 $secondary: #070B34;
+$greyish: #f3f6f4;
 
 .padding-page {
   padding-top: 6em;
@@ -35,6 +36,15 @@ a {
   color: $primary !important; 
 
   &:hover {
+    color: $primary_hover !important; 
+  }
+}
+
+li a.dropdown-item {
+  color: $primary !important; 
+
+  &:hover {
+    background-color: $greyish !important;
     color: $primary_hover !important; 
   }
 }
