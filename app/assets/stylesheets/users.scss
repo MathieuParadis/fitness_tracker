@@ -80,6 +80,10 @@
       }
     }
   }
+
+  .devise-links a {
+    text-decoration: none;
+  }
 }
 
 .login-section {
@@ -94,5 +98,7 @@
 .forgot-password-section {
   .box {
     width: 100%;
+    max-width: 600px;
   }
 }
+
