@@ -1,5 +1,7 @@
 class RecordsController < ApplicationController
   before_action :set_record, only: %i[ show edit update destroy ]
+  before_action :set_user, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /records or /records.json
   def index
@@ -63,8 +65,12 @@ class RecordsController < ApplicationController
       @record = Record.find(params[:id])
     end
 
+    def set_user
+      @user = current_user
+    end
+
     # Only allow a list of trusted parameters through.
     def record_params
-      params.fetch(:record, {})
+      params.require(:record).permit(:duration, :date, :user_id, :activity_id)
     end
 end

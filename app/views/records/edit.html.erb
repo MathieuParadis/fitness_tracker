@@ -2,5 +2,5 @@
 
 <%= render 'form', record: @record %>
 
-<%= link_to 'Show', @record %> |
-<%= link_to 'Back', records_path %>
+<%= link_to 'Show', user_record_path(@record.user.id) %> 
+<%= link_to 'Back', user_records_path %>
