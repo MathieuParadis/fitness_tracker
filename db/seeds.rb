@@ -58,7 +58,6 @@ p Record.create(user: mathieu, activity: walking, duration: 40, date: "2022-01-0
 p Record.create(user: mathieu, activity: running, duration: 120, date: "2022-01-22")
 
 
-
 ############################################
 
 system("clear")

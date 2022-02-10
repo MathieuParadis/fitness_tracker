@@ -1,23 +1,19 @@
 <div class="forgot-password-section">
   <div class="container d-flex flex-column justify-content-center align-items-center">
     <div class="box py-3">
-      <div class="d-flex flex-column justify-content-center">
+      <div class="d-flex flex-column justify-content-center mt-2 mb-5">
+        <%= image_tag("logo.svg", style: "max-height: 60px", alt: "move and groove logo", class: "mt-2 mb-4") %>
         <h2 class="text-center">Forgot your password?</h2>
-        <%= image_tag("logo.svg", style: "max-height: 60px", alt: "move and groove logo", class: "mt-2 mb-5") %>
-
       </div>
-      <div class="signup-form mx-3 mb-4">
+      <div class="signup-form mx-3 mb-4 pt-4">
         <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
           <%= render "devise/shared/error_messages", resource: resource %>
           <div class="field">
-            <%= f.label :email %><br />
             <div class="input">
               <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Your email" %>
               <span class="icon-mail"><i class="fa fa-envelope text-primary"></i></span>
             </div>
           </div>
-
-
           <div class="actions mt-4 d-flex justify-content-center">
             <%= f.submit "Send me reset password instruction", class: "btn-round text-white py-2" %>
           </div>

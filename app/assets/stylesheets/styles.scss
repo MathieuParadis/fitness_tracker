@@ -1,5 +1,5 @@
-$primary: #390e9c;
-$primary_hover: #7856c9;
+$primary: #0faef0;
+$primary_hover: #0D9CD8;
 $secondary: #070B34;
 
 .padding-page {
@@ -12,4 +12,29 @@ $secondary: #070B34;
 
 .border-radius-5 {
   border-radius: 5px;
+}
+
+a.btn {
+  color: white !important; 
+
+  &:hover { 
+    background-color: $primary_hover !important; 
+  }
+}
+
+a.btn.btn-outline-primary {
+  color: $primary !important; 
+
+  &:hover { 
+    background-color: $primary !important; 
+    color: white !important; 
+  }
+}
+
+a {
+  color: $primary !important; 
+
+  &:hover {
+    color: $primary_hover !important; 
+  }
 }
