@@ -52,10 +52,15 @@ fencing = Activity.find_by(name: "Fencing")
 tennis = Activity.find_by(name: "Tennis")
 badminton = Activity.find_by(name: "Badminton")
 skateboarding = Activity.find_by(name: "Skateboarding")
+golfing = Activity.find_by(name: "Golfing")
+
 
 p Record.create(user: mathieu, activity: badminton, duration: 60, date: "2021-12-08")
 p Record.create(user: mathieu, activity: walking, duration: 40, date: "2022-01-02")
 p Record.create(user: mathieu, activity: running, duration: 120, date: "2022-01-22")
+p Record.create(user: mathieu, activity: taekwondo, duration: 130, date: "2022-03-21")
+p Record.create(user: mathieu, activity: golfing, duration: 223, date: "2022-04-19")
+p Record.create(user: mathieu, activity: tennis, duration: 55, date: "2022-10-18")
 
 
 ############################################

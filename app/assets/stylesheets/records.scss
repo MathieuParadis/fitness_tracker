@@ -8,28 +8,35 @@
 
 
   .styled-table {
-    max-width: 100%;
+    width: 900px;
     border-collapse: collapse;
     margin: 3em 0;
     font-size: 0.9em;
     font-family: sans-serif;
-    min-width: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+    @media screen and (max-width: 500px) {
+      width: 350px;
+    }
+
+    @media screen and (min-width: 501px) and (max-width: 900px) {
+      width: 450px;
+    }
 
     th, td {
       padding: 0.4em;
       text-align: center;
-      width: 14em;
 
       a i {
         color: $primary;
       }
     }
 
+
+
     th.column-empty, td.column-empty {
       padding: 0.4em;
       text-align: center;
-      width: 3em;
     }
 
     thead tr {

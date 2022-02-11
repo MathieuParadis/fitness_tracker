@@ -5,6 +5,16 @@ $grey: #dddddd;
 $light-grey: #f3f6f4;
 $white: #ffffff;
 
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  body {
+    width: 100%;
+  }
+}
+
 .padding-page {
   padding-top: 6em;
 }

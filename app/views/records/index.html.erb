@@ -4,7 +4,7 @@
   <div class="px-lg-5 d-flex flex-column align-items-center">
     <h1 class="text-center">My records</h1>
 
-    <div class="mx-5 px-5">
+    <div class="mx-5 px-5 mx-lg-0 px-lg-0">
       <button class="btn btn-outline-primary">
         <%= link_to 'Add new record', new_user_record_path, class: "btn-link" %>
       </button>
@@ -13,9 +13,9 @@
     <table class="styled-table">
       <thead>
           <tr>
-            <th>Activity</th>
-            <th>Date</th>
-            <th>Duration (mim)</th>
+            <th class="test">Activity</th>
+            <th class="test">Date</th>
+            <th class="test">Duration</th>
             <th class="column-empty"></th>
             <th class="column-empty"></th>
             <th class="column-empty"></th>
@@ -24,9 +24,9 @@
       <tbody>
         <% @records.each do |record| %>
           <tr>
-            <td><%= record.activity.name %></td>
-            <td><%= record.date.strftime("%d / %m / %Y") %></td>
-            <td><%= record.duration %></td>
+            <td class="test"><%= record.activity.name %></td>
+            <td class="test"><%= record.date.strftime("%d / %m / %Y") %></td>
+            <td class="test"><%= formatted_duration(record.duration) %></td>
             <td class="column-empty">
               <%= link_to user_record_path(record.id,) do %>
                 <i class="fa fa-solid fa-eye"></i>
