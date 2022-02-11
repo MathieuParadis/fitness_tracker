@@ -4,4 +4,59 @@
 
 .records-index {
   height: 100vh;
+
+
+
+  .styled-table {
+    max-width: 100%;
+    border-collapse: collapse;
+    margin: 3em 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+    th, td {
+      padding: 0.4em;
+      text-align: center;
+      width: 14em;
+
+      a i {
+        color: $primary;
+      }
+    }
+
+    th.column-empty, td.column-empty {
+      padding: 0.4em;
+      text-align: center;
+      width: 3em;
+    }
+
+    thead tr {
+      background-color: $primary;
+      color: $white;
+      text-align: left;
+    }
+
+    tbody tr {
+      border-bottom: thin solid $grey;
+    
+      &:nth-of-type(even) {
+        background-color: $grey;
+      }
+
+      &:hover {
+        background-color: $primary;
+        color: $white;
+
+        a i {
+          color: $white;
+        }
+      }
+      
+      &:last-of-type {
+        border-bottom: thick solid $primary;
+      }
+    }
+  }
 }

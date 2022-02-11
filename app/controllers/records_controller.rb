@@ -6,6 +6,7 @@ class RecordsController < ApplicationController
   # GET /records or /records.json
   def index
     @records = Record.all
+    @records = @records.sort{ |a, b| b.date <=> a.date }
   end
 
   # GET /records/1 or /records/1.json

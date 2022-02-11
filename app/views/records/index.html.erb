@@ -25,7 +25,7 @@
         <% @records.each do |record| %>
           <tr>
             <td><%= record.activity.name %></td>
-            <td><%= record.date %></td>
+            <td><%= record.date.strftime("%d / %m / %Y") %></td>
             <td><%= record.duration %></td>
             <td class="column-empty">
               <%= link_to user_record_path(record.id,) do %>

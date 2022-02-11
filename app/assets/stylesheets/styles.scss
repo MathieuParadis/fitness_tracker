@@ -1,7 +1,9 @@
 $primary: #0faef0;
 $primary_hover: #0D9CD8;
 $secondary: #070B34;
-$greyish: #f3f6f4;
+$grey: #dddddd;
+$light-grey: #f3f6f4;
+$white: #ffffff;
 
 .padding-page {
   padding-top: 6em;
@@ -16,7 +18,7 @@ $greyish: #f3f6f4;
 }
 
 a.btn {
-  color: white !important; 
+  color: $white !important; 
 
   &:hover { 
     background-color: $primary_hover !important; 
@@ -28,7 +30,7 @@ a.btn.btn-outline-primary {
 
   &:hover { 
     background-color: $primary !important; 
-    color: white !important; 
+    color: $white !important; 
   }
 }
 
@@ -44,7 +46,7 @@ li a.dropdown-item {
   color: $primary !important; 
 
   &:hover {
-    background-color: $greyish !important;
+    background-color: $light-grey !important;
     color: $primary_hover !important; 
   }
 }

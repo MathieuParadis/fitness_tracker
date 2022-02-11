@@ -61,5 +61,6 @@ p Record.create(user: mathieu, activity: running, duration: 120, date: "2022-01-
 ############################################
 
 system("clear")
+p "Seeding over"
 p "Enjoy 🥃 !!!"
 p "----------->"
