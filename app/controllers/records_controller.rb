@@ -2,7 +2,7 @@ class RecordsController < ApplicationController
   include RecordsHelper
 
   before_action :set_record, only: %i[ show edit update destroy ]
-  before_action :set_user, only: %i[ show edit update destroy ]
+  before_action :set_user
   before_action :authenticate_user!
 
   # GET /records or /records.json
