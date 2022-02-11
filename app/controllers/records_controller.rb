@@ -17,20 +17,24 @@ class RecordsController < ApplicationController
 
   # GET /records/new
   def new
+    @activities = Activity.all
     @record = Record.new
   end
 
   # GET /records/1/edit
   def edit
+    @activities = Activity.all
   end
 
   # POST /records or /records.json
   def create
     @record = Record.new(record_params)
+    @record.user = @user
+
 
     respond_to do |format|
       if @record.save
-        format.html { redirect_to record_url(@record), notice: "Record was successfully created." }
+        format.html { redirect_to user_record_url(@record), notice: "Record was successfully created." }
         format.json { render :show, status: :created, location: @record }
       else
         format.html { render :new, status: :unprocessable_entity }
