@@ -27,23 +27,6 @@ html {
   border-radius: 5px;
 }
 
-a.btn {
-  color: $white !important; 
-
-  &:hover { 
-    background-color: $primary_hover !important; 
-  }
-}
-
-a.btn.btn-outline-primary {
-  color: $primary !important; 
-
-  &:hover { 
-    background-color: $primary !important; 
-    color: $white !important; 
-  }
-}
-
 a {
   color: $primary !important; 
 
@@ -58,5 +41,22 @@ li a.dropdown-item {
   &:hover {
     background-color: $light-grey !important;
     color: $primary_hover !important; 
+  }
+}
+
+a.btn {
+  color: $white !important; 
+
+  &:hover { 
+    background-color: $primary_hover !important; 
+  }
+}
+
+a.btn.btn-outline-primary {
+  color: $primary !important; 
+
+  &:hover { 
+    background-color: $primary !important; 
+    color: $white !important; 
   }
 }
