@@ -2,23 +2,21 @@
 
 <h1>Activities</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
     <% @activities.each do |activity| %>
-      <tr>
-        <td><%= link_to 'Show', activity %></td>
-        <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
-        <td><%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+
+
+      <div class="card" style="width: 18rem;">
+      <% if activity.picture.attached? %>
+        <%= image_tag activity.picture, alt: "activity image" %>
+      <% end %>
+
+      </div>
+
+
+
     <% end %>
-  </tbody>
-</table>
+
 
 <br>
 

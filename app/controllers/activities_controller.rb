@@ -65,6 +65,8 @@ class ActivitiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def activity_params
-      params.fetch(:activity, {})
+      params.require(:activity).permit(:name, :picture, :hoovered_picture)
+      # params.require(:activity).permit(:name)
+
     end
 end
