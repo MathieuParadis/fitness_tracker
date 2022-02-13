@@ -16,12 +16,6 @@
   }
 
   .box {
-    width: 440px;
-
-    @media screen and (max-width: 500px) {
-      width: 360px;
-    }
-
     .field {
       margin-bottom: 1em;
 

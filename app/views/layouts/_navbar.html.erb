@@ -33,14 +33,10 @@
           </p>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
             <li>
-              <%= link_to user_path, class: "dropdown-item" do %>
-                My profile
-              <% end %>
+              <%= link_to "My profile", user_path, class: "dropdown-item" %>
             </li>
             <li>
-              <%= link_to user_records_path, class: "dropdown-item" do %>
-                My records
-              <% end %>
+              <%= link_to "My records", user_records_path, class: "dropdown-item" %>
             </li>
             <li><hr class="dropdown-divider"></li>
             <li>

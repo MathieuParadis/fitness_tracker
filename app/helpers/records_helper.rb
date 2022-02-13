@@ -1,5 +1,5 @@
 module RecordsHelper
-  def formatted_duration(duration_in_minutes)
+  def formattedDuration(duration_in_minutes)
     hours = duration_in_minutes / 60
     minutes = (duration_in_minutes) % 60
 
@@ -9,7 +9,12 @@ module RecordsHelper
       return "#{ minutes } min"
     else 
       return "#{ hours } h"
-    
     end
   end
+
+  def formattedDate(date)
+    formatted_date = date.strftime("%d / %m / %Y")
+    return formatted_date
+  end
+
 end

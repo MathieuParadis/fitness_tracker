@@ -1,1 +1,21 @@
-show user
+<div class="user-show">
+  <div class="container d-flex flex-column flex-lg-row justify-content-center align-items-center">
+    <div class="user-profile box box-shadow mx-0 my-3 me-lg-3 my-lg-0 p-3">
+      <h3 class="text-primary mb-3">My profile</h3>
+
+
+    </div>
+    <div class="stats-records d-flex flex-column justify-content-between">
+      <div class="box box-shadow mx-0 my-3 ms-lg-3 p-3">
+        <h3 class="text-primary mb-3">My stats</h3>
+      </div>
+      <div class="box box-shadow mx-0 my-3 ms-lg-3 p-3">
+        <h3 class="text-primary mb-3">My last record</h3>
+        <p><span class="fw-bold">Date: </span><%= formattedDate(lastRecord().date) %></p>
+        <p><span class="fw-bold">Duration: </span><%= formattedDuration(lastRecord().duration) %></p>
+        <p><span class="fw-bold">Activity: </span><%= lastRecord().activity.name %></p>
+        <%= link_to "See all my records", user_records_path, class: "btn btn-secondary btn-round" %>
+      </div>
+    </div>
+  </div>
+</div>

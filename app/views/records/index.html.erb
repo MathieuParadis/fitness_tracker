@@ -23,8 +23,8 @@
         <% @records.each do |record| %>
           <tr>
             <td class="test"><%= record.activity.name %></td>
-            <td class="test"><%= record.date.strftime("%d / %m / %Y") %></td>
-            <td class="test"><%= formatted_duration(record.duration) %></td>
+            <td class="test"><%= formattedDate(record.date) %></td>
+            <td class="test"><%= formattedDuration(record.duration) %></td>
             <td class="column-empty">
               <%= link_to user_record_path(record.id,) do %>
                 <i class="fa fa-solid fa-eye"></i>

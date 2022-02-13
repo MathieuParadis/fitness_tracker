@@ -1,6 +1,7 @@
 $primary: #0faef0;
 $primary_hover: #0D9CD8;
-$secondary: #070B34;
+$secondary: #f0510f;
+$secondary_hover: #d8480d;
 $grey: #dddddd;
 $light-grey: #f3f6f4;
 $white: #ffffff;
@@ -17,6 +18,14 @@ html {
 
 .padding-page {
   padding-top: 6em;
+}
+
+.box {
+  width: 440px;
+
+  @media screen and (max-width: 500px) {
+    width: 360px;
+  }
 }
 
 .box-shadow {
@@ -36,6 +45,14 @@ html {
   border-radius: 0 0 5px 5px !important; 
 }
 
+.btn-round {
+  border-radius: 200px !important;
+}
+
+.btn-100 {
+  width: 100px !important;
+}
+
 a {
   color: $primary !important; 
 
@@ -53,11 +70,19 @@ li a.dropdown-item {
   }
 }
 
-a.btn {
+a.btn.btn-primary {
   color: $white !important; 
 
   &:hover { 
     background-color: $primary_hover !important; 
+  }
+}
+
+a.btn.btn-secondary {
+  color: $white !important; 
+
+  &:hover { 
+    background-color: $secondary_hover !important; 
   }
 }
 
