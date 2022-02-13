@@ -1,11 +1,17 @@
 var activityCards = document.querySelectorAll('.activity-card');
 
-alert(activityCards.length);
 
 
 activityCards.forEach((card)=>{
-  card.addEventListener('click', ()=>{
-    card.classList.add('d-none');  
+  card.addEventListener('mouseover', ()=>{
+    card.children[0].classList.toggle('d-none');  
+    card.children[1].classList.toggle('d-none');  
   })
 });
 
+activityCards.forEach((card)=>{
+  card.addEventListener('mouseout', ()=>{
+    card.children[0].classList.toggle('d-none');  
+    card.children[1].classList.toggle('d-none');  
+  })
+});
