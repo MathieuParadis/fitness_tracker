@@ -4,16 +4,16 @@
 
   <% if userRecords().length %>
     <div>
-      <div>
+      <div class="mb-3">
         <h5 class="text-secondary">Total</h5>
-        <p><span class="fw-bold">Number of sessions: </span><%= userRecords().length %></p>
-        <p><span class="fw-bold">Total training time: </span><%= formattedDuration(totalDurationTrained()) %></p>
+        <p class="mb-1"><span>Number of sessions: </span><%= userRecords().length %></p>
+        <p class="mb-1"><span>Total training time: </span><%= formattedDuration(totalDurationTrained()) %></p>
       </div>
 
       <div>
         <h5 class="text-secondary">This month</h5>
-        <p><span class="fw-bold">Number of sessions: </span><%= userRecords().length %></p>
-        <p><span class="fw-bold">Total training time: </span><%= formattedDuration(totalDurationTrained()) %></p>
+        <p class="mb-1"><span>Number of sessions: </span><%= userRecords().length %></p>
+        <p class="mb-1"><span>Total training time: </span><%= formattedDuration(totalDurationTrained()) %></p>
       </div>
     </div>
   <% else %>
