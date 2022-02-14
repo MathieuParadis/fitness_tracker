@@ -1,0 +1,28 @@
+<div class="box box-shadow mx-0 my-3 ms-lg-3 p-3">
+  <h3 class="text-primary mb-3">My stats</h3>
+
+
+  <% if userRecords().length %>
+    <div>
+      <div>
+        <h5 class="text-secondary">Total</h5>
+        <p><span class="fw-bold">Number of sessions: </span><%= userRecords().length %></p>
+        <p><span class="fw-bold">Total training time: </span><%= formattedDuration(totalDurationTrained()) %></p>
+      </div>
+
+      <div>
+        <h5 class="text-secondary">This month</h5>
+        <p><span class="fw-bold">Number of sessions: </span><%= userRecords().length %></p>
+        <p><span class="fw-bold">Total training time: </span><%= formattedDuration(totalDurationTrained()) %></p>
+      </div>
+    </div>
+  <% else %>
+    <div>
+      <p>You need to record your training sessions in order to get the statistics</p>
+    </div>
+  <% end %>
+
+
+
+
+</div>

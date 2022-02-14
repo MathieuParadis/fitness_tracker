@@ -1,0 +1,16 @@
+<div class="box box-shadow mx-0 my-3 ms-lg-3 p-3">
+  <h3 class="text-primary mb-3">My last record</h3>
+  <% if lastRecord() %>
+    <div>
+      <p><span class="fw-bold">Date: </span><%= formattedDate(lastRecord().date) %></p>
+      <p><span class="fw-bold">Duration: </span><%= formattedDuration(lastRecord().duration) %></p>
+      <p><span class="fw-bold">Activity: </span><%= lastRecord().activity.name %></p>
+      <%= link_to "See all my records", user_records_path, class: "btn btn-secondary btn-round" %>
+    </div>
+  <% else %>
+    <div>
+      <p>You do not have any record yet</p>
+      <%= link_to "Add a record", new_user_record_path, class: "btn btn-secondary btn-round" %>
+    </div>
+  <% end %>
+</div>
