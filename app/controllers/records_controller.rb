@@ -7,7 +7,7 @@ class RecordsController < ApplicationController
 
   # GET /records or /records.json
   def index
-    @records = Record.all
+    @records = Record.all.where(user_id: @user.id)
     @records = @records.sort{ |a, b| b.date <=> a.date }
   end
 
