@@ -4,4 +4,11 @@ class Record < ApplicationRecord
 
   validates :date, presence: true
   validates :duration, presence: true
+  validate :correctDate?
+
+  def correctDate?
+    errors.add(:date, "cannot be in future") unless
+    self.date <= Date.today
+  end
+
 end

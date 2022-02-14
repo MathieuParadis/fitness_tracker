@@ -12,8 +12,8 @@
 
       <div>
         <h5 class="text-secondary">This month</h5>
-        <p class="mb-1"><span>Number of sessions: </span><%= userRecords().length %></p>
-        <p class="mb-1"><span>Total training time: </span><%= formattedDuration(totalDurationTrained()) %></p>
+        <p class="mb-1"><span>Number of sessions: </span><%= userRecordsCurrentMonth().length %></p>
+        <p class="mb-1"><span>Total training time: </span><%= formattedDuration(totalDurationTrainedCurrentMonth()) %></p>
       </div>
     </div>
   <% else %>

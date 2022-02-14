@@ -10,8 +10,26 @@ module UsersHelper
   end
 
   def totalDurationTrained()
-    total_duration = 02
+    total_duration = 0
     userRecords().map{|record| total_duration += record.duration}
+
+    return total_duration
+  end
+
+  def userRecordsCurrentMonth()
+    user_records = Record.where(user_id: current_user.id)
+    user_records_current_month = []
+
+    if user_records.where("date > ?", Date.today.at_beginning_of_month).any?
+      user_records_current_month = user_records.where("date > ?", Date.today.at_beginning_of_month)
+    end
+
+    return user_records_current_month
+  end
+
+  def totalDurationTrainedCurrentMonth()
+    total_duration = 0
+    userRecordsCurrentMonth().map{|record| total_duration += record.duration}
 
     return total_duration
   end
