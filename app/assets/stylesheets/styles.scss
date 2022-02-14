@@ -2,6 +2,10 @@ $primary: #0faef0;
 $primary_hover: #0D9CD8;
 $secondary: #f0510f;
 $secondary_hover: #C0400C;
+$warning: #e4bc40;
+$warning_hover: #cda939;
+$danger: #ff3860;
+$danger_hover: #d8312b;
 $grey: #dddddd;
 $light-grey: #f3f6f4;
 $white: #ffffff;
@@ -53,6 +57,10 @@ html {
   width: 100px !important;
 }
 
+.btn-150 {
+  width: 150px !important;
+}
+
 .btn-200 {
   width: 200px !important;
 }
@@ -74,6 +82,10 @@ li a.dropdown-item {
   }
 }
 
+.btn {
+  border: 0 !important; 
+}
+
 a.btn.btn-primary {
   color: $white !important; 
 
@@ -87,6 +99,22 @@ a.btn.btn-secondary {
 
   &:hover { 
     background-color: $secondary_hover !important; 
+  }
+}
+
+a.btn.btn-warning {
+  color: $white !important; 
+
+  &:hover { 
+    background-color: $warning_hover !important; 
+  }
+}
+
+a.btn.btn-danger {
+  color: $white !important; 
+
+  &:hover { 
+    background-color: $danger_hover !important; 
   }
 }
 
@@ -104,6 +132,24 @@ a.btn.btn-outline-secondary {
 
   &:hover { 
     background-color: $secondary !important; 
+    color: $white !important; 
+  }
+}
+
+a.btn.btn-outline-warning {
+  color: $warning !important; 
+
+  &:hover { 
+    background-color: $warning !important; 
+    color: $white !important; 
+  }
+}
+
+a.btn.btn-outline-danger{
+  color: $danger!important; 
+
+  &:hover { 
+    background-color: $danger !important; 
     color: $white !important; 
   }
 }

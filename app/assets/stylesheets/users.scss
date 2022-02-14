@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.signup-section, .login-section, .forgot-password-section {
+.signup-section, .login-section, .forgot-password-section, .edit-credentials-section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,7 +88,7 @@
   }
 }
 
-.forgot-password-section {
+.forgot-password-section, .edit-credentials-section {
   .box {
     width: 100%;
     max-width: 600px;

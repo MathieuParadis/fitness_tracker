@@ -5,7 +5,7 @@
         <%= image_tag("logo.svg", style: "max-height: 60px", alt: "move and groove logo", class: "mt-2 mb-4") %>
         <h2 class="text-center">Forgot your password?</h2>
       </div>
-      <div class="signup-form mx-3 mb-4 pt-4">
+      <div class="mx-3 mb-4 pt-4">
         <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
           <%= render "devise/shared/error_messages", resource: resource %>
           <div class="field">
@@ -15,7 +15,7 @@
             </div>
           </div>
           <div class="actions mt-4 d-flex justify-content-center">
-            <%= f.submit "Send me reset password instruction", class: "btn-round text-white py-2" %>
+            <%= f.submit "Send me reset password instruction", class: "btn-round text-white py-2 px-3" %>
           </div>
         <% end %>
       </div>
