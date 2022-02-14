@@ -111,4 +111,10 @@
       height: 504px;
     }
   }
+
+  .last-record {
+    @media (min-width: 992px) {
+      height: 219px;
+    }
+  }
 }

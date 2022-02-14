@@ -4,7 +4,7 @@
     <% if @user.avatar.attached? %>
       <%= image_tag @user.avatar, class: "avatar" %>
     <% else %>
-      <%= image_tag("avatar.svg", class: "avatar") %>
+      <%= image_tag("avatar/avatar.svg", class: "avatar") %>
     <% end %>
     <div class="py-3">
       <p><span>First name: </span><%= @user.first_name %></p>

@@ -1,4 +1,4 @@
-<div class="box box-shadow mx-0 my-2 ms-lg-3 p-3">
+<div class="last-record box box-shadow mx-0 my-2 ms-lg-3 p-3">
   <h3 class="text-primary mb-3">My last record</h3>
   <% if lastRecord() %>
     <div>
@@ -8,9 +8,9 @@
       <%= link_to "See all my records", user_records_path, class: "btn btn-secondary btn-round mt-3" %>
     </div>
   <% else %>
-    <div>
-      <p>You do not have any record yet</p>
-      <%= link_to "Add a record", new_user_record_path, class: "btn btn-secondary btn-round" %>
+    <div class="d-flex flex-column justify-content-between">
+      <p class=" m-0 mb-lg-4 mt-lg-1">You do not have any record yet</p></br>
+      <%= link_to "Add a record", new_user_record_path, class: "btn btn-secondary btn-round btn-200 m-0 mt-lg-4" %>
     </div>
   <% end %>
 </div>
