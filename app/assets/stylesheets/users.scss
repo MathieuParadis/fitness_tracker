@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 90vh;
 
   .img-section img {
     max-height:540px;
@@ -88,7 +88,7 @@
   }
 }
 
-.forgot-password-section, .edit-credentials-section {
+.forgot-password-section, .edit-credentials-section, .edit-profile-section {
   .box {
     width: 100%;
     max-width: 600px;
@@ -119,3 +119,10 @@
     }
   }
 }
+
+.btn-avatar {
+  .add-avatar {
+    display: none;
+  }
+}
+

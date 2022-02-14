@@ -6,6 +6,8 @@ $warning: #e4bc40;
 $warning_hover: #cda939;
 $danger: #ff3860;
 $danger_hover: #d8312b;
+$success: #28a745;
+$success_hover: #23923d;
 $grey: #dddddd;
 $light-grey: #f3f6f4;
 $white: #ffffff;
@@ -86,7 +88,8 @@ li a.dropdown-item {
   border: 0 !important; 
 }
 
-a.btn.btn-primary {
+a.btn.btn-primary, .btn.btn-success  {
+  background-color: $primary !important; 
   color: $white !important; 
 
   &:hover { 
@@ -94,7 +97,8 @@ a.btn.btn-primary {
   }
 }
 
-a.btn.btn-secondary {
+a.btn.btn-secondary, .btn.btn-success  {
+  background-color: $secondary !important; 
   color: $white !important; 
 
   &:hover { 
@@ -102,7 +106,8 @@ a.btn.btn-secondary {
   }
 }
 
-a.btn.btn-warning {
+a.btn.btn-warning, .btn.btn-success  {
+  background-color: $warning !important; 
   color: $white !important; 
 
   &:hover { 
@@ -110,7 +115,8 @@ a.btn.btn-warning {
   }
 }
 
-a.btn.btn-danger {
+a.btn.btn-danger, .btn.btn-success  {
+  background-color: $danger !important; 
   color: $white !important; 
 
   &:hover { 
@@ -118,7 +124,16 @@ a.btn.btn-danger {
   }
 }
 
-a.btn.btn-outline-primary {
+a.btn.btn-success, .btn.btn-success {
+  background-color: $success !important; 
+  color: $white !important; 
+
+  &:hover { 
+    background-color: $success_hover !important; 
+  }
+}
+
+a.btn.btn-outline-primary, .btn.btn-outline-primary {
   color: $primary !important; 
   border: 1px solid $primary !important;
 
@@ -128,7 +143,7 @@ a.btn.btn-outline-primary {
   }
 }
 
-a.btn.btn-outline-secondary {
+a.btn.btn-outline-secondary, .btn.btn-outline-secondary {
   color: $secondary !important; 
   border: 1px solid $secondary !important;
 
@@ -138,7 +153,7 @@ a.btn.btn-outline-secondary {
   }
 }
 
-a.btn.btn-outline-warning {
+a.btn.btn-outline-warning, .btn.btn-outline-warning {
   color: $warning !important; 
   border: 1px solid $warning !important;
 
@@ -148,12 +163,22 @@ a.btn.btn-outline-warning {
   }
 }
 
-a.btn.btn-outline-danger{
+a.btn.btn-outline-danger, .btn.btn-outline-danger {
   color: $danger!important; 
   border: 1px solid $danger !important;
 
   &:hover { 
     background-color: $danger !important; 
+    color: $white !important; 
+  }
+}
+
+a.btn.btn-outline-success, .btn.btn-outline-success {
+  color: $success!important; 
+  border: 1px solid $success !important;
+
+  &:hover { 
+    background-color: $success !important; 
     color: $white !important; 
   }
 }
