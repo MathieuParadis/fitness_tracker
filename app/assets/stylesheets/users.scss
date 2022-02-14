@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.signup-section, .login-section, .forgot-password-section, .edit-credentials-section {
+.signup-section, .login-section, .forgot-password-section, .edit-credentials-section, .edit-profile-section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -103,6 +103,7 @@
 
   .avatar {
     height: 150px;
+    width: 150px;
     border-radius: 80px;
   }
 

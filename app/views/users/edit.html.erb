@@ -1,1 +1,45 @@
-edit page
+<div class="edit-profile-section">
+  <div class="container d-flex flex-column justify-content-center align-items-center">
+    <div class="box py-3">
+      <h2 class="text-center">Update my profile</h2>
+      <div class="mx-3 mb-4 pt-4">
+        <%= form_with(model: @user, local: true) do |f| %>
+          <div class="field">
+            <%= f.label :first_name %><br />
+            <div class="input">
+              <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name", placeholder: "First name" %>
+              <span class="icon-lock"><i class="fa fa-user text-primary"></i></span>
+            </div>
+          </div>
+          <div class="field">
+            <%= f.label :last_name %><br />
+            <div class="input">
+              <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name", placeholder: "Last name" %>
+              <span class="icon-lock"><i class="fa fa-user text-primary"></i></span>
+            </div>
+          </div>
+
+          <div class="field">
+            <%= f.label :avatar %><br />
+            <div class="input">
+              <%= f.file_field :avatar %>
+            </div>
+          </div>
+
+
+            <div class="actions mt-4 d-flex flex-column flex-md-row justify-content-center align-items-center">
+              <%= f.submit "Update profile", class: "btn btn-round btn-150 text-white py-2 px-3 my-2 me-md-2" %> 
+              <%= link_to "Back", :back, class: "btn btn-round btn-warning btn-150 text-white py-2 px-3 my-2 ms-md-2" %> 
+            </div>
+
+
+        <% end %>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+  
+  
+

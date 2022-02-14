@@ -120,6 +120,7 @@ a.btn.btn-danger {
 
 a.btn.btn-outline-primary {
   color: $primary !important; 
+  border: 1px solid $primary !important;
 
   &:hover { 
     background-color: $primary !important; 
@@ -129,6 +130,7 @@ a.btn.btn-outline-primary {
 
 a.btn.btn-outline-secondary {
   color: $secondary !important; 
+  border: 1px solid $secondary !important;
 
   &:hover { 
     background-color: $secondary !important; 
@@ -138,6 +140,7 @@ a.btn.btn-outline-secondary {
 
 a.btn.btn-outline-warning {
   color: $warning !important; 
+  border: 1px solid $warning !important;
 
   &:hover { 
     background-color: $warning !important; 
@@ -147,6 +150,7 @@ a.btn.btn-outline-warning {
 
 a.btn.btn-outline-danger{
   color: $danger!important; 
+  border: 1px solid $danger !important;
 
   &:hover { 
     background-color: $danger !important; 
