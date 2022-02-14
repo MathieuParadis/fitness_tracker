@@ -5,7 +5,7 @@
       <p class="mb-1"><span>Date: </span><%= formattedDate(lastRecord().date) %></p>
       <p class="mb-1"><span>Duration: </span><%= formattedDuration(lastRecord().duration) %></p>
       <p class="mb-1"><span>Activity: </span><%= lastRecord().activity.name %></p>
-      <%= link_to "See all my records", user_records_path, class: "btn btn-secondary btn-round mt-2" %>
+      <%= link_to "See all my records", user_records_path, class: "btn btn-secondary btn-round mt-3" %>
     </div>
   <% else %>
     <div>

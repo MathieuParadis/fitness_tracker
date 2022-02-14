@@ -19,7 +19,8 @@ Record.destroy_all
 ############################################
 
 p 'USERS'
-User.create(email: "mathieu.thp@yopmail.com", password: "azerty123", first_name: "Mathieu", last_name: "Paradis")
+mathieu = User.create(email: "mathieu.thp@yopmail.com", password: "azerty123", first_name: "Mathieu", last_name: "Paradis")
+mathieu.avatar.attach(io: File.open('app/assets/images/avatar/koala_avatar.png'), filename: 'koala_avatar.png')
 
 p "-" * 50
 

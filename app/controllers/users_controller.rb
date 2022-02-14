@@ -15,6 +15,10 @@ class UsersController < ApplicationController
   end
 
   # GET /users/1/edit
+  def show
+  end
+
+  # GET /users/1/edit
   def edit
   end
 
@@ -59,6 +63,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:email, :password, :location_id, :first_name, :last_name, :avatar)
+      params.require(:user).permit(:email, :password, :first_name, :last_name, :avatar)
     end
 end
