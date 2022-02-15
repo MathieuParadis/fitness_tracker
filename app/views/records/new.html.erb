@@ -1,5 +1,9 @@
-<h1>New Record</h1>
-
-<%= render 'new', record: @record %>
-
-<%= link_to 'Back', user_records_path %>
+<div class="record-new">
+  <div class="container d-flex flex-column justify-content-center align-items-center">
+    <div class="box py-3">
+      <h1 class="text-center mb-4">New record</h1>
+      <%= render 'new', record: @record %>
+    </div>
+  </div>
+</div>
+  

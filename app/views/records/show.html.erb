@@ -1,21 +1,16 @@
 <div class="record-show">
   <p id="notice"><%= notice %></p>
   <div class="container d-flex flex-column justify-content-center align-items-center">
-
-
-  <div class="d-flex flex-column justify-content-center align-items-center">
-    <%= image_tag ("well_done.svg"), class: "activity-illustration mb-4" %>
-
-    <h2 class="mb-4">Congratulations</h2>
-    <p class="mb-2 text-center">You completed <%= formattedDuration(@record.duration) %> of <%= @record.activity.name %> on <%= formattedDate(@record.date) %></p>
-    <p>Way to go! &#128170;</p>
-  </div>
-
-  <div class="mt-4 d-flex flex-column flex-md-row justify-content-center align-items-center">
-    <%= link_to "Edit", edit_user_record_path(@record), class: "btn btn-round btn-secondary btn-150 text-white py-2 px-3 my-2 me-md-2" %>
-    <%= link_to "All records", user_records_path, class: "btn btn-round btn-outline-primary btn-150 text-white py-2 px-3 my-2 ms-md-2" %>
-  </div>
-
+    <div class="d-flex flex-column justify-content-center align-items-center">
+      <%= image_tag ("well_done.svg"), class: "activity-illustration mb-4" %>
+      <h2 class="mb-4">Congratulations</h2>
+      <p class="mb-2 text-center">You completed <%= formattedDuration(@record.duration) %> of <%= @record.activity.name %> on <%= formattedDate(@record.date) %></p>
+      <p>Way to go! &#128170;</p>
+    </div>
+    <div class="mt-4 d-flex flex-column flex-md-row justify-content-center align-items-center">
+      <%= link_to "Edit", edit_user_record_path(@record), class: "btn btn-round btn-secondary btn-150 text-white py-2 px-3 my-2 me-md-2" %>
+      <%= link_to "All records", user_records_path, class: "btn btn-round btn-outline-primary btn-150 text-white py-2 px-3 my-2 ms-md-2" %>
+    </div>
   </div>
 </div>
 

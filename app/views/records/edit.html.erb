@@ -1,6 +1,9 @@
-<h1>Editing Record</h1>
-
-<%= render 'edit', record: @record %>
-
-<%= link_to 'Show', user_record_path(@record.user.id) %> 
-<%= link_to 'Back', user_records_path %>
+<div class="record-edit">
+  <div class="container d-flex flex-column justify-content-center align-items-center">
+    <div class="box py-3">
+      <h1 class="text-center mb-4">Edit record</h1>
+      <%= render 'edit', record: @record %>
+    </div>
+  </div>
+</div>
+  

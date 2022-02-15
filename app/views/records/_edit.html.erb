@@ -9,33 +9,30 @@
       </ul>
     </div>
   <% end %>
-
-
-      <div class="col-md-6">
-
-
-            <div class="form-group">
-              <label class="labels">Activity</label>
-
-              <%= form.select :activity_id, @activities.to_a.map { |a| [a.name, a.id]}, {}, class: "form-control" %>
-            </div>
-        </select>
-      </div>
-
-      <div class="d-flex flex-column mx-5 my-3">
-        <%= form.label :date, "date", class: "label" %>
-        <%= form.text_field :date, autofocus: true, class: "input", placeholder: "" %>
-      </div>
-
-      <div class="d-flex flex-column mx-5 my-3">
-        <%= form.label :duration, "Duration (min)", class: "label" %>
-        <%= form.number_field :duration, step: :any, autofocus: true, class: "input", placeholder: "" %>
-      </div>
-
-
-
-
-  <div class="actions">
-    <%= form.submit %>
+  <div class="field">
+    <%= form.label :activity %><br />
+    <div class="input">
+      <%= form.select :activity_id, @activities.to_a.map { |a| [a.name, a.id]}, {}, class: "form-control" %>
+      <span class="icon-caret-down"><i class="fa fa-caret-down"></i></span>
+    </div>
+  </div>
+  <div class="field">
+    <%= form.label :date %><br />
+    <div class="input">
+      <%= form.text_field :date, autofocus: true, autocomplete: true %>
+      <span class="icon-calendar"><i class="fa fa-calendar text-primary"></i></span>
+    </div>
+  </div>
+  <div class="field">
+    <%= form.label :duration %><i> (min)</i><br/>
+    <div class="input">
+      <%= form.number_field :duration, step: :any, autofocus: true, autocomplete: true, class: "duration-field" %>
+      <span class="icon-clock"><i class="fa fa-clock-o text-primary"></i></span>
+    </div>
+    <i class="time"></i>
+  </div>
+  <div class="actions mt-4 d-flex flex-column flex-md-row justify-content-center align-items-center">
+    <%= form.submit "Update record", class: "btn btn-round btn-success btn-150 text-white py-2 px-3 my-2 me-md-2" %> 
+    <%= link_to "Back", user_records_path , class: "back-btn btn btn-round btn-warning btn-150 text-white py-2 px-3 my-2 ms-md-2" %> 
   </div>
 <% end %>
