@@ -3,7 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .activity-index {
+  min-height: 100vh;
   .card{
     cursor: pointer;
+  }
+
+  .activity-name {
+    height: 5em;
   }
 }
