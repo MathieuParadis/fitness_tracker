@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
   var activityCards = document.querySelectorAll('.activity-card');
 
-
   activityCards.forEach((card)=>{
     card.addEventListener('mouseover', ()=>{
       card.children[0].classList.toggle('d-none');  
