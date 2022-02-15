@@ -1,0 +1,41 @@
+<%= form_for(@record, url: user_record_path(@record)) do |form| %>
+  <% if record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(record.errors.count, "error") %> prohibited this record from being saved:</h2>
+      <ul>
+      <% record.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+      <div class="col-md-6">
+
+
+            <div class="form-group">
+              <label class="labels">Activity</label>
+
+              <%= form.select :activity_id, @activities.to_a.map { |a| [a.name, a.id]}, {}, class: "form-control" %>
+            </div>
+        </select>
+      </div>
+
+      <div class="d-flex flex-column mx-5 my-3">
+        <%= form.label :date, "date", class: "label" %>
+        <%= form.text_field :date, autofocus: true, class: "input", placeholder: "" %>
+      </div>
+
+      <div class="d-flex flex-column mx-5 my-3">
+        <%= form.label :duration, "Duration (min)", class: "label" %>
+        <%= form.number_field :duration, step: :any, autofocus: true, class: "input", placeholder: "" %>
+      </div>
+
+
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
