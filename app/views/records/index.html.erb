@@ -1,53 +1,65 @@
 <div class="records-index">
   <p id="notice"><%= notice %></p>
-
-  <div class="px-lg-5 d-flex flex-column align-items-center">
-    <h1 class="text-center">My records</h1>
-
-    <div class="mx-5 px-5 mx-lg-0 px-lg-0">
-      <%= link_to 'Add new record', new_user_record_path, class: " btn btn-primary" %>
-    </div>
-
-    <table class="styled-table">
-      <thead>
-          <tr>
-            <th class="test">Activity</th>
-            <th class="test">Date</th>
-            <th class="test">Duration</th>
-            <th class="column-empty"></th>
-            <th class="column-empty"></th>
-            <th class="column-empty"></th>
-          </tr>
-      </thead>
-      <tbody>
-        <% @records.each do |record| %>
-          <tr>
-            <td class="test"><%= record.activity.name %></td>
-            <td class="test"><%= formattedDate(record.date) %></td>
-            <td class="test"><%= formattedDuration(record.duration) %></td>
-            <td class="column-empty">
-              <%= link_to user_record_path(record.id,) do %>
-                <i class="fa fa-solid fa-eye"></i>
-              <% end %>
-            </td>
-            <td class="column-empty">
-              <%= link_to edit_user_record_path(record.id,) do %>
-                <i class="fa fa-edit"></i>
-              <% end %>
-            </td>
-            <td class="column-empty">
-              <%= link_to user_record_path(record.id), method: :delete, data: { confirm: 'Are you sure?' } do %>
-                <i class="fa fa-solid fa-trash"></i>
-              <% end %>
-            </td>
-
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+  <div class="px-lg-5 d-flex flex-column justify-content-center align-items-center">
+    <h1 class="text-center mb-4">My records</h1>
+    <% if @records.length > 0 %>
+      <div class="mx-5 px-5 mx-lg-0 px-lg-0">
+        <%= link_to 'Add new record', new_user_record_path, class: "btn btn-outline-primary btn-round btn-150 py-2" %>
+      </div>
+      <table class="styled-table">
+        <thead>
+            <tr>
+              <th class="test">Activity</th>
+              <th class="test">Date</th>
+              <th class="test">Duration</th>
+              <th class="column-empty"></th>
+              <th class="column-empty"></th>
+              <th class="column-empty"></th>
+            </tr>
+        </thead>
+        <tbody>
+          <% @records.each do |record| %>
+            <tr>
+              <td class="test"><%= record.activity.name %></td>
+              <td class="test"><%= formattedDate(record.date) %></td>
+              <td class="test"><%= formattedDuration(record.duration) %></td>
+              <td class="column-empty">
+                <%= link_to user_record_path(record.id,) do %>
+                  <i class="fa fa-solid fa-eye"></i>
+                <% end %>
+              </td>
+              <td class="column-empty">
+                <%= link_to edit_user_record_path(record.id,) do %>
+                  <i class="fa fa-edit"></i>
+                <% end %>
+              </td>
+              <td class="column-empty">
+                <%= link_to user_record_path(record.id), method: :delete, data: { confirm: 'Are you sure?' } do %>
+                  <i class="fa fa-solid fa-trash"></i>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% else %>
+      <table class="styled-table">
+        <thead>
+            <tr>
+              <th class="test">Activity</th>
+              <th class="test">Date</th>
+              <th class="test">Duration</th>
+              <th class="column-empty"></th>
+              <th class="column-empty"></th>
+              <th class="column-empty"></th>
+            </tr>
+        </thead>
+      </table>
+      <p class="m-4 text-center">You do not have any record yet. Start tracking your activity now!</p>
+      <div class="mx-5 px-5 mx-lg-0 px-lg-0">
+        <%= link_to 'Add new record', new_user_record_path, class: "btn btn-outline-primary btn-round btn-150 py-2" %>
+      </div>
+    <% end %>
   </div>
-
-  <br>
-
 </div>
 

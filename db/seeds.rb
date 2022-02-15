@@ -69,7 +69,7 @@ badminton = Activity.create(name: "Badminton")
 badminton.picture.attach(io: File.open('app/assets/images/activities/badminton_blue.png'), filename: 'badminton_blue.png')
 badminton.hoovered_picture.attach(io: File.open('app/assets/images/activities/badminton_white.png'), filename: 'badminton_white.png')
 
-skateboarding = Activity.create(name: "Skateboarding")
+skateboarding = Activity.create(name: "Skate boarding")
 skateboarding.picture.attach(io: File.open('app/assets/images/activities/skateboarding_blue.png'), filename: 'skateboarding_blue.png')
 skateboarding.hoovered_picture.attach(io: File.open('app/assets/images/activities/skateboarding_white.png'), filename: 'skateboarding_white.png')
 
