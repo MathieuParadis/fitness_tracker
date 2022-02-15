@@ -2,6 +2,7 @@ class RecordsController < ApplicationController
   include RecordsHelper
 
   before_action :set_record, only: %i[ show edit update destroy ]
+  before_action :set_activity, only: %i[ new ]
   before_action :set_user
   before_action :authenticate_user!
 
@@ -19,6 +20,11 @@ class RecordsController < ApplicationController
   def new
     @activities = Activity.all
     @record = Record.new
+
+    if @activity
+      @record.activity_id = @activity.id
+    end
+
   end
 
   # GET /records/1/edit
@@ -74,6 +80,14 @@ class RecordsController < ApplicationController
 
     def set_user
       @user = current_user
+    end
+
+    def set_activity
+      if params[:activity_id]
+        @activity = Activity.find(params[:activity_id])
+      else
+        return false
+      end
     end
 
     # Only allow a list of trusted parameters through.

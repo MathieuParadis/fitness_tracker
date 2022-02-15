@@ -1,36 +1,36 @@
   <div class="activity-index">
     <p id="notice"><%= notice %></p>
-
     <div class="container">
       <div class="row">
         <h1>Activities</h1>
         <div class="d-flex flex-wrap">
-        
           <% @activities.each do |activity| %>
-            <div class="activity-card col-6 col-md-4 col-lg-3 col-xl-2 px-2 py-2">
-              <div class="card card_blue border-radius-5">
-                <% if activity.picture.attached? %>
-                <div class="card border-0 p-4">
-                  <%= image_tag activity.picture, alt: "#{activity.name} image" %>
-                </div>
-                <% end %>
-                <h3 class="text-center text-primary py-3 m-0 border-radius-bottom-5"><%= activity.name %></h3>
-              </div>
-              <div class="card card_white d-none border-0">
-                <% if activity.hoovered_picture.attached? %>
-                  <div class="card border-0 p-4 bg-primary border-radius-top-5">
-                    <%= image_tag activity.hoovered_picture, alt: "#{activity.name} image" %>
+              <div class="activity-card col-6 col-md-4 col-lg-3 col-xl-2 px-2 py-2">
+                  <div class="card card_blue border-radius-5">
+                    <%= link_to new_user_record_path(activity_id: activity.id), class: "text-decoration-none" do %>
+                      <% if activity.picture.attached? %>
+                        <div class="card border-0 p-4">
+                          <%= image_tag activity.picture, alt: "#{activity.name} image", class: "stretched-link" %>
+                        </div>
+                      <% end %>
+                      <h3 class="text-center text-primary py-3 m-0 border-radius-bottom-5"><%= activity.name %></h3>
+                    <% end %>
                   </div>
-                <% end %>
-                <h3 class="text-center text-white bg-primary py-3 m-0 border-radius-bottom-5"><%= activity.name %></h3>
+                  <div class="card card_white d-none border-0">
+                    <%= link_to new_user_record_path(activity_id: activity.id), class: "text-decoration-none" do %>
+                      <% if activity.hoovered_picture.attached? %>
+                        <div class="card border-0 p-4 bg-primary border-radius-top-5">
+                          <%= image_tag activity.hoovered_picture, alt: "#{activity.name} image" %>
+                        </div>
+                      <% end %>
+                      <h3 class="text-center text-white bg-primary py-3 m-0 border-radius-bottom-5"><%= activity.name %></h3>
+                    <% end %>
+                  </div>
               </div>
-            </div>
           <% end %>
-
         </div>
       </div>
     </div>
   </div>
 
 
-<%= link_to 'New Activity', new_activity_path %>

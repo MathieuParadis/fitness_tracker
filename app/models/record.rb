@@ -7,8 +7,10 @@ class Record < ApplicationRecord
   validate :correctDate?
 
   def correctDate?
-    errors.add(:date, "cannot be in future") unless
-    self.date <= Date.today
+    if self.date
+      errors.add(:date, "cannot be in future") unless
+      self.date <= Date.today
+    end
   end
 
 end
