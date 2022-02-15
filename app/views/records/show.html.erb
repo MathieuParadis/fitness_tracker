@@ -1,4 +1,24 @@
-<p id="notice"><%= notice %></p>
+<div class="record-show">
+  <p id="notice"><%= notice %></p>
+  <div class="container d-flex flex-column justify-content-center align-items-center">
 
-<%= link_to 'Edit', edit_user_record_path(@record) %> |
-<%= link_to 'Back', user_records_path %>
+
+  <div class="d-flex flex-column justify-content-center align-items-center">
+    <% if @record.activity.picture.attached? %>
+      <%= image_tag @record.activity.picture, style: "width: 100px" %>
+    <% end %>
+
+    <h2>Congratulations</h2>
+    <p>You completed <%= formattedDuration(@record.duration) %> of <%= @record.activity.name %> on <%= formattedDate(@record.date) %></p>
+
+  </div>
+
+
+
+<%= link_to 'Edit', edit_user_record_path(@record) %>
+<%= link_to 'All records', user_records_path %>
+  </div>
+</div>
+
+
+

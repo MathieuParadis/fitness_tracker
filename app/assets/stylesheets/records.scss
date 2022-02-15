@@ -3,9 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .records-index {
-  height: 100vh;
-
-
+  min-height: 100vh;
 
   .styled-table {
     width: 900px;
@@ -31,8 +29,6 @@
         color: $primary;
       }
     }
-
-
 
     th.column-empty, td.column-empty {
       padding: 0.4em;
@@ -66,4 +62,12 @@
       }
     }
   }
+}
+
+
+
+
+.record-show {
+  min-height: 100vh;
+
 }
