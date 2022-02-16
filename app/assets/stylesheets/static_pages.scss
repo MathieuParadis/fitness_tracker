@@ -1,5 +1,27 @@
-// Place all the styles related to the static_pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// // Place all the styles related to the static_pages controller here.
+// // They will automatically be included in application.css.
+// // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.homepage {
+  margin-top: -6em;
 
+  .hero-section {
+    height: 100vh;
+    background-image: url('deadlift.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .overlay {
+      position: relative;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background-color: $dark_blue;
+      opacity: 0.6;
+    }
+
+    .content {
+      margin-top: 6em;
+    }
+  }
+}
