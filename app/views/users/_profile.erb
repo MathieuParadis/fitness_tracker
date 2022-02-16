@@ -7,13 +7,15 @@
       <%= image_tag("avatar/avatar.svg", class: "avatar") %>
     <% end %>
     <div class="py-3">
-      <p><span>First name: </span><%= @user.first_name %></p>
-      <p><span>Last name: </span><%= @user.last_name %></p>
-      <p><span>Email: </span><%= @user.email %></p>
+      <p class="mb-2 pb-1"><span>Email: </span><%= @user.email %></p>
+      <p class="mb-2 pb-1"><span>First name: </span><%= @user.first_name %></p>
+      <p class="mb-2 pb-1"><span>Last name: </span><%= @user.last_name %></p>
+      <p class="mb-2 pb-1"><span>Age: </span><%= age(@user.date_of_birth) %></p>
+      <p class="mb-2 pb-1"><span>Sex: </span><%= @user.gender.capitalize %></p>
     </div>
   </div>
 
-  <div class="d-flex flex-column mt-3">
+  <div class="d-flex flex-column">
     <%= link_to "Edit my profile", edit_user_path, class: "btn btn-secondary btn-round btn-200 mb-2" %>
     <%= link_to "Change my credentials", edit_user_registration_path, class: "btn btn-outline-secondary btn-round btn-200 mt-2" %>
   </div>

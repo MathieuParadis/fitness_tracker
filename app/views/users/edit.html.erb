@@ -7,17 +7,35 @@
           <div class="field">
             <%= f.label :first_name %><br />
             <div class="input">
-              <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name", placeholder: "First name" %>
+              <%= f.text_field :first_name, autofocus: true, autocomplete: true, placeholder: "First name" %>
               <span class="icon-lock"><i class="fa fa-user text-primary"></i></span>
             </div>
           </div>
           <div class="field">
             <%= f.label :last_name %><br />
             <div class="input">
-              <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name", placeholder: "Last name" %>
+              <%= f.text_field :last_name, autofocus: true, autocomplete: true, placeholder: "Last name" %>
               <span class="icon-lock"><i class="fa fa-user text-primary"></i></span>
             </div>
           </div>
+          <div class="field">
+            <%= f.label :date_of_birth %><br />
+            <div class="input">
+              <%= f.text_field :date_of_birth, autofocus: true, autocomplete: true, placeholder: "Date of birth" %>
+              <span class="icon-calendar"><i class="fa fa-calendar text-primary"></i></span>
+            </div>
+          </div>
+
+          <div class="field">
+            <%= f.label :sex %><br />
+            <div class="input">
+             <%= f.select :gender, options_for_select(['unknown', 'male', 'female', 'other'], @user.gender) %>
+            <span class="icon-gender"><i class="fa fa-venus-mars text-primary"></i></span>
+            </div>
+          </div>
+
+
+
           <div class="field">
             <%= f.label :avatar %><br />
             <label class="btn-avatar btn btn-outline-primary btn-round text-center text-white">
