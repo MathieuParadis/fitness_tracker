@@ -1,5 +1,5 @@
 $primary: #0faef0;
-$primary_hover: #0D9CD8;
+$primary_hover: #0c8bc0;
 $secondary: #f0510f;
 $secondary_hover: #C0400C;
 $warning: #e4bc40;
@@ -8,6 +8,8 @@ $danger: #ff3860;
 $danger_hover: #d8312b;
 $success: #28a745;
 $success_hover: #23923d;
+$dark: #56616b;
+$dark_hover: #444d55;
 $grey: #dddddd;
 $light-grey: #f3f6f4;
 $dark_blue: #110641;
@@ -134,6 +136,15 @@ a.btn.btn-success, .btn.btn-success {
   }
 }
 
+a.btn.btn-dark, .btn.btn-dark {
+  background-color: $dark !important; 
+  color: $white !important; 
+
+  &:hover { 
+    background-color: $dark_hover !important; 
+  }
+}
+
 a.btn.btn-outline-primary, .btn.btn-outline-primary {
   color: $primary !important; 
   border: 1px solid $primary !important;
@@ -180,6 +191,16 @@ a.btn.btn-outline-success, .btn.btn-outline-success {
 
   &:hover { 
     background-color: $success !important; 
+    color: $white !important; 
+  }
+}
+
+a.btn.btn-outline-dark, .btn.btn-outline-dark {
+  color: $dark!important; 
+  border: 1px solid $dark !important;
+
+  &:hover { 
+    background-color: $dark !important; 
     color: $white !important; 
   }
 }
