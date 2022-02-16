@@ -39,7 +39,7 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, flash: { success: "Profil mis à jour"} }
+        format.html { redirect_to user_path, flash: { success: "Profil mis à jour"} }
       else
         format.html { render :edit, status: :unprocessable_entity }
       end
