@@ -11,17 +11,29 @@
     background-repeat: no-repeat;
     background-size: cover;
 
+    @media screen and (max-width: 500px) {
+      background-image: url('dumbells.jpg');
+    }
+
     .overlay {
-      position: relative;
       top: 0;
       left: 0;
+      z-index: 10;
       height: 100%;
       background-color: $dark_blue;
       opacity: 0.6;
+
+      @media screen and (max-width: 500px) {
+        opacity: 0.7;
+      }
     }
 
     .content {
+      position: absolute;
+      top: 0;
+      left: 0;
       margin-top: 6em;
+      z-index: 200;
     }
   }
 }
