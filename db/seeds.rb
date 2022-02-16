@@ -73,6 +73,56 @@ skateboarding = Activity.create(name: "Skate boarding")
 skateboarding.picture.attach(io: File.open('app/assets/images/activities/skateboarding_blue.png'), filename: 'skateboarding_blue.png')
 skateboarding.hoovered_picture.attach(io: File.open('app/assets/images/activities/skateboarding_white.png'), filename: 'skateboarding_white.png')
 
+american_football = Activity.create(name: "American football")
+american_football.picture.attach(io: File.open('app/assets/images/activities/american_football_blue.png'), filename: 'american_football_blue.png')
+american_football.hoovered_picture.attach(io: File.open('app/assets/images/activities/american_football_white.png'), filename: 'american_football_white.png')
+
+baseball = Activity.create(name: "Baseball")
+baseball.picture.attach(io: File.open('app/assets/images/activities/baseball_blue.png'), filename: 'baseball_blue.png')
+baseball.hoovered_picture.attach(io: File.open('app/assets/images/activities/baseball_white.png'), filename: 'baseball_white.png')
+
+basket = Activity.create(name: "Basketball")
+basket.picture.attach(io: File.open('app/assets/images/activities/basket_blue.png'), filename: 'basket_blue.png')
+basket.hoovered_picture.attach(io: File.open('app/assets/images/activities/basket_white.png'), filename: 'basket_white.png')
+
+football = Activity.create(name: "Football")
+football.picture.attach(io: File.open('app/assets/images/activities/football_blue.png'), filename: 'football_blue.png')
+football.hoovered_picture.attach(io: File.open('app/assets/images/activities/football_white.png'), filename: 'football_white.png')
+
+horse_riding = Activity.create(name: "Horse riding")
+horse_riding.picture.attach(io: File.open('app/assets/images/activities/horse_riding_blue.png'), filename: 'horse_riding_blue.png')
+horse_riding.hoovered_picture.attach(io: File.open('app/assets/images/activities/horse_riding_white.png'), filename: 'horse_riding_white.png')
+
+ice_hokey = Activity.create(name: "Ice hokey")
+ice_hokey.picture.attach(io: File.open('app/assets/images/activities/ice_hokey_blue.png'), filename: 'ice_hokey_blue.png')
+ice_hokey.hoovered_picture.attach(io: File.open('app/assets/images/activities/ice_hokey_white.png'), filename: 'ice_hokey_white.png')
+
+ice_skating = Activity.create(name: "Ice skating")
+ice_skating.picture.attach(io: File.open('app/assets/images/activities/ice_skating_blue.png'), filename: 'ice_skating_blue.png')
+ice_skating.hoovered_picture.attach(io: File.open('app/assets/images/activities/ice_skating_white.png'), filename: 'ice_skating_white.png')
+
+kayaking = Activity.create(name: "Kayaking")
+kayaking.picture.attach(io: File.open('app/assets/images/activities/kayaking_blue.png'), filename: 'kayaking_blue.png')
+kayaking.hoovered_picture.attach(io: File.open('app/assets/images/activities/kayaking_white.png'), filename: 'kayaking_white.png')
+
+pingpong = Activity.create(name: "Ping pong")
+pingpong.picture.attach(io: File.open('app/assets/images/activities/pingpong_blue.png'), filename: 'pingpong_blue.png')
+pingpong.hoovered_picture.attach(io: File.open('app/assets/images/activities/pingpong_white.png'), filename: 'pingpong_white.png')
+
+skiing = Activity.create(name: "Skiing")
+skiing.picture.attach(io: File.open('app/assets/images/activities/skiing_blue.png'), filename: 'skiing_blue.png')
+skiing.hoovered_picture.attach(io: File.open('app/assets/images/activities/skiing_white.png'), filename: 'skiing_white.png')
+
+snowboarding = Activity.create(name: "Snow boarding")
+snowboarding.picture.attach(io: File.open('app/assets/images/activities/snowboarding_blue.png'), filename: 'snowboarding_blue.png')
+snowboarding.hoovered_picture.attach(io: File.open('app/assets/images/activities/snowboarding_white.png'), filename: 'snowboarding_white.png')
+
+volley = Activity.create(name: "Volleyball")
+volley.picture.attach(io: File.open('app/assets/images/activities/volley_blue.png'), filename: 'volley_blue.png')
+volley.hoovered_picture.attach(io: File.open('app/assets/images/activities/volley_white.png'), filename: 'volley_white.png')
+
+
+
 p "-" * 50
 
 p 'RECORDS'
