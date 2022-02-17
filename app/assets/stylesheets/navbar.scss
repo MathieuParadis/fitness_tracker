@@ -1,4 +1,16 @@
-.navbar-end {
-  display: flex;
-  justify-content: end;
+.navbar {
+  padding-left: 6rem;
+  padding-right: 6rem;
+
+  @media screen and (max-width: 767px) {
+  padding: 0;
+  }
+
+
+  .navbar-end {
+    display: flex;
+    justify-content: end;
+  }  
 }
+
+
