@@ -17,7 +17,8 @@
 
   <body>
     <%= render 'layouts/navbar'%>
-    <div class="padding-page min-vh-100">
+    <%= render 'layouts/flash'%>
+    <div id="yield" class="padding-page min-vh-100">
       <%= yield %>
     </div>
     <%= render 'layouts/footer'%>

@@ -40,7 +40,7 @@ class RecordsController < ApplicationController
 
     respond_to do |format|
       if @record.save
-        format.html { redirect_to user_record_url(@record), notice: "Record was successfully created." }
+        format.html { redirect_to user_record_url(@record), notice: "Record was successfully created" }
         format.json { render :show, status: :created, location: @record }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -53,7 +53,7 @@ class RecordsController < ApplicationController
   def update
     respond_to do |format|
       if @record.update(record_params)
-        format.html { redirect_to user_record_url(@record), notice: "Record was successfully updated." }
+        format.html { redirect_to user_record_url(@record), notice: "Record was successfully updated" }
         format.json { render :show, status: :ok, location: @record }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -64,8 +64,6 @@ class RecordsController < ApplicationController
 
   # DELETE /records/1 or /records/1.json
   def destroy
-
-    
     respond_to do |format|
       format.html do
         if @record != nil
@@ -80,8 +78,8 @@ class RecordsController < ApplicationController
   
       format.js do
         if @record != nil
-            flash.now[:notice] = "Record was successfully destroyed"
-            @record.destroy
+          @record.destroy
+          flash.now[:notice] = "Record was successfully destroyed"
         else
           flash[:alert] = "We got a problem Houston"
         end

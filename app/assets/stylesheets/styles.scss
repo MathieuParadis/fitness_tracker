@@ -29,6 +29,19 @@ html {
   padding-top: 6em;
 }
 
+#flash-section {
+  position: fixed;
+  top: 0;
+  margin-top: 5.5em;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+
+  #flash-message {
+    width: 100vw;
+  }
+}
+
 .box {
   width: 440px;
 
