@@ -1,8 +1,8 @@
 <%= form_with(model: [@user, @record], local: true) do |form| %>
   <% if record.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(record.errors.count, "error") %> prohibited this record from being saved:</h2>
-      <ul>
+    <div id="error_explanation" class= "alert alert-danger">
+      <h2 class="h5"><%= pluralize(record.errors.count, "error") %> prohibited this record from being saved:</h2>
+      <ul class="m-0">
       <% record.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
