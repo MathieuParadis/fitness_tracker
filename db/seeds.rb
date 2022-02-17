@@ -148,7 +148,14 @@ p Record.create(user: mathieu, activity: tennis, duration: 55, date: "2021-10-18
 p Record.create(user: mathieu, activity: badminton, duration: 60, date: "2021-12-08")
 p Record.create(user: mathieu, activity: tennis, duration: 60, date: "2022-02-02")
 p Record.create(user: mathieu, activity: boxing, duration: 60, date: "2022-02-14")
-
+p Record.create(user: mathieu, activity: walking, duration: 40, date: "2021-01-02")
+p Record.create(user: mathieu, activity: running, duration: 120, date: "2021-01-22")
+p Record.create(user: mathieu, activity: taekwondo, duration: 130, date: "2020-03-21")
+p Record.create(user: mathieu, activity: golfing, duration: 223, date: "2012-04-19")
+p Record.create(user: mathieu, activity: tennis, duration: 55, date: "2012-10-18")
+p Record.create(user: mathieu, activity: badminton, duration: 60, date: "2013-12-08")
+p Record.create(user: mathieu, activity: tennis, duration: 60, date: "2000-02-02")
+p Record.create(user: mathieu, activity: boxing, duration: 60, date: "2021-02-14")
 
 
 ############################################

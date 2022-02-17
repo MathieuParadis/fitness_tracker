@@ -19,7 +19,7 @@
         </thead>
         <tbody>
           <% @records.each do |record| %>
-            <tr id="<%= record.created_at %>">
+            <tr id="<%= record.id %>">
               <td class="test"><%= record.activity.name %></td>
               <td class="test"><%= formattedDate(record.date) %></td>
               <td class="test"><%= formattedDuration(record.duration) %></td>
