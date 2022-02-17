@@ -3,20 +3,20 @@
   var yield = document.getElementById('yield');
 
 
-const displayFlash = () => {
+const displayFlashDeleteRecord = () => {
   yield.classList.add("mt-3");
   flashSection.classList.add("alert", "alert-success");
   flashMsg.innerHTML = "Record was successfully destroyed";
 }
 
-const removeFlash = () => {
+const removeFlashDeleteRecord  = () => {
   yield.classList.remove("mt-3");
   flashSection.classList.remove("alert", "alert-success");
   flashMsg.innerHTML = "";
 }
 
 const flashDeleteRecord = () => {
-  $.when(displayFlash()).then(function(){
-    setTimeout(removeFlash, 1500);
+  $.when(displayFlashDeleteRecord ()).then(function(){
+    setTimeout(removeFlashDeleteRecord , 1500);
   })
 }
