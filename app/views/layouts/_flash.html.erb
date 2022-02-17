@@ -1,3 +1,11 @@
 <div id="flash-section" class="mb-2">
   <p id ="flash-message" class="m-0"></p>
 </div>
+
+<div class="pt-5">
+  <% flash.each do |type, msg| %>
+    <div class=" alert alert-warning <%= type %> notification pt-5" role="alert">
+      <%= msg %>
+    </div>
+  <% end %> 
+</div>
