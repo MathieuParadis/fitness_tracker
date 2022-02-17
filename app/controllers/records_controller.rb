@@ -64,6 +64,8 @@ class RecordsController < ApplicationController
 
   # DELETE /records/1 or /records/1.json
   def destroy
+
+    
     respond_to do |format|
       format.html do
         if @record != nil
@@ -78,8 +80,8 @@ class RecordsController < ApplicationController
   
       format.js do
         if @record != nil
-          @record.destroy
             flash.now[:notice] = "Record was successfully destroyed"
+            @record.destroy
         else
           flash[:alert] = "We got a problem Houston"
         end
