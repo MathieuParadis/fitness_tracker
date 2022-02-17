@@ -57,10 +57,15 @@
 
     .img-card {
       width: 350px;
-      height: 400px;
+      height: 350px;
       object-fit: fill;
       border: 1px solid $grey;
       border-radius: 50px;
+
+      @media screen and (max-width: 767px) {
+        width: 200px;
+        height: 200px;
+      }
     }
 
     .activity-section-right {
