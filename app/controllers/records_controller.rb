@@ -64,12 +64,32 @@ class RecordsController < ApplicationController
 
   # DELETE /records/1 or /records/1.json
   def destroy
-    @record.destroy
-
     respond_to do |format|
-      format.html { redirect_to user_records_url, notice: "Record was successfully destroyed." }
-      format.json { head :no_content }
+      format.html do
+        if @record != nil
+          @record.destroy
+          flash[:notice] = "Record was successfully destroyed"
+          redirect_back fallback_location: root_path
+        else
+          flash[:error] = "We got a problem Houston"
+          redirect_back fallback_location: root_path
+        end
+      end
+  
+      format.js do
+        if @record != nil
+          @record.destroy
+            flash.now[:notice] = "Record was successfully destroyed"
+        else
+          flash[:alert] = "We got a problem Houston"
+        end
+      end
     end
+    
+
+
+
+
   end
 
   private
