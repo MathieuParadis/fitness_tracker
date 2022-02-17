@@ -53,12 +53,36 @@
   }
 
   .activity-section {
-    height: 100vh;
+    min-height: 70vh;
 
+    .img-card {
+      width: 350px;
+      height: 400px;
+      object-fit: fill;
+      border: 1px solid $grey;
+      border-radius: 50px;
+    }
+
+    .carousel-control-prev-icon {
+      transform: translateX(-75px);
+    
+      @media screen and (max-width: 767px) {
+        transform: translateX(0);
+      }
+    }
+    
+    .carousel-control-next-icon {
+      transform: translateX(75px);
+    
+      @media screen and (max-width: 767px) {
+        transform: translateX(0);
+      }
+    }
   }
 
   .features-section {
-    height: 100vh;
+    min-height: 70vh;
     background-color: rgb(80, 31, 31);
   }
 }
+
