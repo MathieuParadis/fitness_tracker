@@ -4,6 +4,9 @@
 
 .homepage {
   margin-top: -6em;
+  margin-left: -6em;
+  margin-right: -6em;
+
 
   .hero-section {
     height: 100vh;
@@ -13,6 +16,7 @@
 
     @media screen and (max-width: 767px) {
       background-image: url('dumbells.jpg');
+      height: 600px;
     }
 
     .overlay {
@@ -54,6 +58,10 @@
 
   .activity-section {
     min-height: 70vh;
+
+    @media screen and (max-width: 767px) {
+      height: 100%;
+    }
 
     .img-card {
       width: 350px;
