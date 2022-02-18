@@ -1,2 +1,9 @@
 document.getElementById('<%= @record.id %>').remove();
 flashDeleteRecord();
+
+var records = document.querySelectorAll('.record-entry');
+var noRecord = document.getElementById('no-record');
+
+if (records.length == 0) {
+  noRecord.classList.remove('d-none');
+} 

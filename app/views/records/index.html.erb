@@ -1,7 +1,6 @@
 <div class="records-index">
   <div class="px-lg-5 d-flex flex-column justify-content-center align-items-center">
     <h1 class="text-center mb-4">My records</h1>
-    <% if @records.length > 0 %>
       <div class="mx-5 px-5 mx-lg-0 px-lg-0">
         <%= link_to 'Add new record', new_user_record_path, class: "btn btn-outline-primary btn-round btn-150 py-2" %>
       </div>
@@ -18,7 +17,7 @@
         </thead>
         <tbody>
           <% @records.each do |record| %>
-            <tr id="<%= record.id %>">
+            <tr id="<%= record.id %>" class="record-entry">
               <td class="test"><%= record.activity.name %></td>
               <td class="test"><%= formattedDate(record.date) %></td>
               <td class="test"><%= formattedDuration(record.duration) %></td>
@@ -41,23 +40,10 @@
           <% end %>
         </tbody>
       </table>
-    <% else %>
-      <table class="styled-table">
-        <thead>
-            <tr>
-              <th class="test">Activity</th>
-              <th class="test">Date</th>
-              <th class="test">Duration</th>
-              <th class="column-empty"></th>
-              <th class="column-empty"></th>
-              <th class="column-empty"></th>
-            </tr>
-        </thead>
-      </table>
-      <p class="m-4 text-center">You do not have any record yet. Start tracking your activity now!</p>
-      <div class="mx-5 px-5 mx-lg-0 px-lg-0">
-        <%= link_to 'Add new record', new_user_record_path, class: "btn btn-outline-primary btn-round btn-150 py-2" %>
-      </div>
+      <p class="m-4 text-center d-none" id="no-record">You do not have any record yet. Start tracking your activity now!</p>
+
+    <% if @records.length == 0 %>
+      <p class="m-4 text-center" id="no-record">You do not have any record yet. Start tracking your activity now!</p>
     <% end %>
   </div>
 </div>
