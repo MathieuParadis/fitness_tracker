@@ -29,6 +29,11 @@ html {
   padding-top: 6em;
   padding-left: 6em;
   padding-right: 6em;
+
+  @media screen and (max-width: 767px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 #flash-section {

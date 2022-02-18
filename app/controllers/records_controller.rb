@@ -36,14 +36,12 @@ class RecordsController < ApplicationController
     @record = Record.new(record_params)
     @record.user = @user
 
-
     respond_to do |format|
       if @record.save
         format.html { redirect_to user_record_url(@record), notice: "Record was successfully created" }
-        format.json { render :show, status: :created, location: @record }
       else
         format.html { render :new }
-        format.json { render json: @record.errors, status: :unprocessable_entity }
+        # format.html { redirect_to new_user_record_url, notice: "An error occured" }
       end
     end
   end
@@ -53,10 +51,8 @@ class RecordsController < ApplicationController
     respond_to do |format|
       if @record.update(record_params)
         format.html { redirect_to user_record_url(@record), notice: "Record was successfully updated" }
-        format.json { render :show, status: :ok, location: @record }
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @record.errors, status: :unprocessable_entity }
       end
     end
   end
