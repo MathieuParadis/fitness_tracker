@@ -24,7 +24,6 @@ class RecordsController < ApplicationController
     if @activity
       @record.activity_id = @activity.id
     end
-
   end
 
   # GET /records/1/edit
@@ -43,7 +42,7 @@ class RecordsController < ApplicationController
         format.html { redirect_to user_record_url(@record), notice: "Record was successfully created" }
         format.json { render :show, status: :created, location: @record }
       else
-        format.html { render :new, status: :unprocessable_entity }
+        format.html { render :new }
         format.json { render json: @record.errors, status: :unprocessable_entity }
       end
     end
@@ -85,11 +84,6 @@ class RecordsController < ApplicationController
         end
       end
     end
-    
-
-
-
-
   end
 
   private
