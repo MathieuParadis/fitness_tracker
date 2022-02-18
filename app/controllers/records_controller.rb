@@ -40,7 +40,7 @@ class RecordsController < ApplicationController
       if @record.save
         format.html { redirect_to user_record_url(@record), notice: "Record was successfully created" }
       else
-        format.html { render :new }
+        format.html { head :bad_request }
         # format.html { redirect_to new_user_record_url, notice: "An error occured" }
       end
     end

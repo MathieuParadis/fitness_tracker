@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  root "static_pages#home"
-
   devise_for :users
+
+  authenticated :user do
+    root :to => "activities#index"
+  end
+
+  root "static_pages#home"
 
   resource :user do
     resources :records
