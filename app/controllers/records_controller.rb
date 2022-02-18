@@ -3,6 +3,7 @@ class RecordsController < ApplicationController
 
   before_action :set_record, only: %i[ show edit update destroy ]
   before_action :set_activity, only: %i[ new ]
+  before_action :set_activities, only: %i[ new create edit update ]
   before_action :set_user
   before_action :authenticate_user!
 
@@ -18,7 +19,6 @@ class RecordsController < ApplicationController
 
   # GET /records/new
   def new
-    @activities = Activity.all
     @record = Record.new
 
     if @activity
@@ -28,7 +28,6 @@ class RecordsController < ApplicationController
 
   # GET /records/1/edit
   def edit
-    @activities = Activity.all
   end
 
   # POST /records or /records.json
@@ -40,8 +39,7 @@ class RecordsController < ApplicationController
       if @record.save
         format.html { redirect_to user_record_url(@record), notice: "Record was successfully created" }
       else
-        format.html { head :bad_request }
-        # format.html { redirect_to new_user_record_url, notice: "An error occured" }
+        format.html { render :new, status: :unprocessable_entity }
       end
     end
   end
@@ -90,6 +88,10 @@ class RecordsController < ApplicationController
 
     def set_user
       @user = current_user
+    end
+
+    def set_activities
+      @activities = Activity.all
     end
 
     def set_activity
