@@ -74,3 +74,6 @@ gem 'jquery-rails'
 
 # Font awesome
 gem 'font-awesome-rails'
+
+# .env
+gem 'dotenv-rails'
