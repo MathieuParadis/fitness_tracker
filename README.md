@@ -3,7 +3,7 @@
 <div>
   <p align="center" >
     <a href="https://moove-and-groove.herokuapp.com/">
-      <img src="https://github.com/MathieuParadis/fitness_tracker/blob/main/app/assets/images/logo.svg" style="width: 200px; height: 200px" alt="Move and Groove logo"/>
+      <img src="https://github.com/MathieuParadis/fitness_tracker/blob/main/app/assets/images/banner.svg" alt="Move and Groove banner"/>
     </a>
   </p>
 </div>
