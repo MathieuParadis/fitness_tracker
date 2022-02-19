@@ -77,3 +77,7 @@ gem 'font-awesome-rails'
 
 # .env
 gem 'dotenv-rails'
+
+gem 'http-2'
+
+gem 'aws-sdk-s3'
