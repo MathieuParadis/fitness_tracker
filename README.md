@@ -1,24 +1,44 @@
-# README
+# Welcome on Move and Groove
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<div>
+  <p align="center" >
+    <a href="https://moove-and-groove.herokuapp.com/"><img src="https://github.com/MathieuParadis/fitness_tracker/blob/main/app/assets/images/logo.svg" alt="Move and Groove logo"/></a>
+  </p>
+</div>
+</br></br>
 
-Things you may want to cover:
 
-* Ruby version
+## Description :
+Move and Groove is a sport tracking app allowing the user to record his physical activity. With over 20 sports available, this is the perfect app to follow up on your progress.
 
-* System dependencies
 
-* Configuration
+### Developper :
+- [Mathieu](https://github.com/MathieuParadis)
 
-* Database creation
 
-* Database initialization
+### Stack :
+* HTML5
+* CSS3
+* Bootstrap 5
+* JavaScript
+* Ruby
+* Ruby on Rails
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+### Gems :
+* [Devise](https://github.com/heartcombo/devise)
 
-* Deployment instructions
 
-* ...
+## How to use it :
+ - In development, clone the repository on your machine, and run:
+  ```
+  bundle install
+  rails db:create
+  rails db:migrate
+  rails db:seed
+  rails server
+  ```
+  
+  Then, access the app in your browser at http://localhost:3000/ 
+
+ - In production, go to the [Move and Groove](https://moove-and-groove.herokuapp.com/) and enjoy the experience
