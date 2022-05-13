@@ -11,8 +11,8 @@ amazon:
   service: S3
   access_key_id: <%= ENV['AMAZON_ACCESS_KEY_ID'] %>
   secret_access_key: <%= ENV['AMAZON_SECRET_ACCESS_KEY'] %>
-  region: ap-southeast-1
-  bucket: app-tracker-rails
+  region: eu-central-1
+  bucket: activity-tracker-rails
 
 # Remember not to checkin your GCS keyfile to a repository
 # google:
