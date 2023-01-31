@@ -42,5 +42,3 @@ Move and Groove is a sport tracking app allowing the user to record his physical
   ```
   
   Then, access the app in your browser at http://localhost:3000/ 
-
- - In production, go to the [Move and Groove](https://moove-and-groove.herokuapp.com/) and enjoy the experience
